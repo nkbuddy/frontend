@@ -1,12 +1,12 @@
 import http from "../http-common";
 
-export default class RestaurantDataService {
+class RestaurantDataService {
   getAll(page = 0){
     return http.get(`?page=${page}`);
   }
 
   get(id){
-    return http.get(`/id/${id}`);
+    return http.get(`/restaurants/id/${id}`);
   }
 
   find(query,by = "name", page=0){
@@ -29,3 +29,5 @@ export default class RestaurantDataService {
     return http.get(`/cuisines`);
   }
 }
+
+export default new RestaurantDataService();

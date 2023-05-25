@@ -21,12 +21,12 @@ function App() {
   return (
     <div className="App">
       <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <a href="/restaurants" className="navbar-brand">
+        <a href="/" className="navbar-brand">
           Restaurant Reviews
         </a>
         <div className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link to={"/restaurants"} className="nav-link">
+            <Link to={"/"} className="nav-link">
               Restaurants
             </Link>
           </li>
@@ -50,7 +50,7 @@ function App() {
       </nav>
       <div className="container mt-3">
         <Routes>
-          <Route path="/restaurants" element={<RestaurantsList />} />
+          <Route path="/" element={<RestaurantsList />} />
           <Route
             path="/restaurants/:id/review"
             element={<AddReview />}
